@@ -20,44 +20,39 @@ class QSliderDemo(QWidget):
         layout.addWidget(self.label)
 
         self.slider = QSlider(Qt.Horizontal)
-
         # 设置最小值
         self.slider.setMinimum(12)
         # 设置最大值
         self.slider.setMaximum(48)
-
         # 步长
         self.slider.setSingleStep(3)
-
         # 设置当前值
         self.slider.setValue(18)
-
         # 设置刻度的位置，刻度在下方
         self.slider.setTickPosition(QSlider.TicksBelow)
         # 设置刻度的间隔
-        self.slider.setTickInterval(6)
+        self.slider.setTickInterval(1)
 
         layout.addWidget(self.slider)
         self.slider.valueChanged.connect(self.valueChange)
 
         self.slider1 = QSlider(Qt.Vertical)
-        layout.addWidget(self.slider1)
         # 设置最小值
         self.slider1.setMinimum(10)
         # 设置最大值
         self.slider1.setMaximum(60)
-
         # 步长
         self.slider1.setSingleStep(5)
-
         # 设置当前值
         self.slider1.setValue(30)
-
         # 设置刻度的位置，刻度在下方
-        self.slider1.setTickPosition(QSlider.TicksLeft)
+        self.slider1.setTickPosition(QSlider.TicksBothSides)
         # 设置刻度的间隔
         self.slider1.setTickInterval(2)
+
+        layout.addWidget(self.slider1)
         self.slider1.valueChanged.connect(self.valueChange)
+
         self.setLayout(layout)
 
     def valueChange(self):
