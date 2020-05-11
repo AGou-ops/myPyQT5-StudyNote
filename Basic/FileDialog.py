@@ -16,7 +16,7 @@ class Example(QMainWindow):
         self.setCentralWidget(self.textEdit)
         self.statusBar()
 
-        openFile = QAction(QIcon('open.png'), 'Open', self)
+        openFile = QAction(QIcon(''), 'Open', self)
         openFile.setShortcut('Ctrl+O')
         openFile.setStatusTip('Open new File')
         openFile.triggered.connect(self.showDialog)
