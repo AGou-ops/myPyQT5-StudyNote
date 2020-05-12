@@ -19,15 +19,17 @@ class ComboBox(QWidget):
         self.comboBox.addItem('C++')
         self.comboBox.addItems(['C', 'GoLang', 'Ruby'])
 
-        self.comboBox.currentIndexChanged.connect(self.selectionChanged)
+        # self.comboBox.currentIndexChanged.connect(self.selectionChanged)
+        self.comboBox.activated[str].connect(self.selectionChanged)
 
-        layout.addWidget(self.label)
         layout.addWidget(self.comboBox)
-
+        layout.addWidget(self.label)
         self.setLayout(layout)
 
     def selectionChanged(self, i):
-        self.label.setText(self.comboBox.currentText())
+        # self.label.setText(self.comboBox.currentText())
+        # self.label.adjustSize()
+        self.label.setText(i)
         self.label.adjustSize()
 
         for count in range(self.comboBox.count()):
