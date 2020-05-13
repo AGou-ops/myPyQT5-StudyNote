@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtWidgets import QMainWindow, QTextEdit, QAction, QApplication
 from PyQt5.QtGui import QIcon
-
+from PyQt5.QtCore import *
 
 class Example(QMainWindow):
 
@@ -14,7 +14,7 @@ class Example(QMainWindow):
         textEdit = QTextEdit()
         self.setCentralWidget(textEdit)
 
-        exitAction = QAction(QIcon(''), 'Exit', self)
+        exitAction = QAction(QIcon('/home/agou-ops/PycharmProjects/myPyQT5-StudyNote/imgs/logo32_32.ico'), 'Exit', self)
         exitAction.setShortcut('Ctrl+Q')
         exitAction.setStatusTip('Exit application')
         exitAction.triggered.connect(self.close)
@@ -27,6 +27,8 @@ class Example(QMainWindow):
 
         toolbar = self.addToolBar('Exit')
         toolbar.addAction(exitAction)
+
+        toolbar.setToolButtonStyle(Qt.ToolButtonTextBesideIcon)
 
         self.setGeometry(300, 300, 350, 250)
         self.setWindowTitle('Main window')

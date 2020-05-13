@@ -16,12 +16,10 @@ class DrawLines(QWidget):
 
         painter.setPen(Qt.darkYellow)
 
-
-
         painter.end()
 
-    if __name__ == "__main__":
-        app = QApplication(sys.argv)
-        window = DrawLines()
-        window.show()
-        sys.exit(app.exec_())
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = DrawLines()
+    window.show()
+    sys.exit(app.exec_())

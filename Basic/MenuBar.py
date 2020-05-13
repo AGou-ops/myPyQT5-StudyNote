@@ -11,7 +11,7 @@ class Example(QMainWindow):
         self.initUI()
 
     def initUI(self):
-        exitAction = QAction(QIcon('../imgs/logo32_32.ico'), '&Exit', self)
+        exitAction = QAction(QIcon('/home/agou-ops/PycharmProjects/myPyQT5-StudyNote/imgs/logo32_32.ico'), '&Exit', self)
         exitAction.setShortcut('Ctrl+Q')
         exitAction.setStatusTip('Exit application')
         exitAction.triggered.connect(qApp.quit)
