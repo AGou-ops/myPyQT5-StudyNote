@@ -7,6 +7,8 @@
 from PyQt5.QtWidgets import *
 import sys
 import qdarkstyle
+
+
 class QSSSelector(QWidget):
     def __init__(self):
         super().__init__()
@@ -14,11 +16,11 @@ class QSSSelector(QWidget):
         btn1 = QPushButton(self)
         btn1.setText("按钮1")
         btn2 = QPushButton(self)
-        btn2.setProperty('name','btn2')
+        btn2.setProperty('name', 'btn2')
         btn2.setText("按钮2")
 
         btn3 = QPushButton(self)
-        btn3.setProperty('name','btn3')
+        btn3.setProperty('name', 'btn3')
         btn3.setText("按钮3")
 
         vbox = QVBoxLayout()
@@ -27,6 +29,8 @@ class QSSSelector(QWidget):
         vbox.addWidget(btn3)
 
         self.setLayout(vbox)
+
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     form = QSSSelector()
@@ -45,7 +49,7 @@ if __name__ == "__main__":
             font-size:30px;
         }
     '''
-    #form.setStyleSheet(qssStyle)
-    form.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
+    form.setStyleSheet(qssStyle)
+    # form.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
     form.show()
     sys.exit(app.exec_())

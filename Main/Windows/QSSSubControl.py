@@ -9,6 +9,7 @@ QComboBox
 from PyQt5.QtWidgets import *
 import sys
 
+
 class QSSSubControl(QWidget):
     def __init__(self):
         super().__init__()
@@ -19,15 +20,17 @@ class QSSSubControl(QWidget):
         combo.addItem("Linux")
         combo.addItem("Mac OS X")
 
-        combo.move(50,50)
+        combo.move(50, 50)
 
-        self.setGeometry(250,200,320,150)
+        self.setGeometry(250, 200, 320, 150)
+
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     form = QSSSubControl()
     qssStyle = '''
        QComboBox#myComboBox::drop-down {
-           image:url(./images/dropdown.png)
+           image:url(/home/agou-ops/PycharmProjects/myPyQT5-StudyNote/Main/Windows/images/dropdown.png)
        }
     '''
     form.setStyleSheet(qssStyle)

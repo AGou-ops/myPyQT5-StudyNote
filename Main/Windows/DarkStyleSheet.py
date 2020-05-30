@@ -1,4 +1,3 @@
-
 '''
 QDarkStyleSheet样式
 
@@ -9,6 +8,7 @@ import sys
 from PyQt5 import QtWidgets, QtCore
 # make the example runnable without the need to install
 from os.path import abspath, dirname
+
 sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
 
 import qdarkstyle

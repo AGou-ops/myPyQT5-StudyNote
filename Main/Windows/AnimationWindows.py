@@ -24,7 +24,10 @@ class AnimationWindows(QWidget):
         self.update()
         if self.i == 5:
             self.i = 1
-        self.mypic = {1: './images/left.png', 2: "./images/up.png", 3: './images/right.png', 4: './images/down.png'}
+        self.mypic = {1: '/home/agou-ops/PycharmProjects/myPyQT5-StudyNote/Main/Windows/images/left.png',
+                      2: "/home/agou-ops/PycharmProjects/myPyQT5-StudyNote/Main/Windows/images/up.png",
+                      3: '/home/agou-ops/PycharmProjects/myPyQT5-StudyNote/Main/Windows/images/right.png',
+                      4: '/home/agou-ops/PycharmProjects/myPyQT5-StudyNote/Main/Windows/images/down.png'}
         self.pix = QPixmap(self.mypic[self.i])
         self.resize(self.pix.size())
         self.setMask(self.pix.mask())
@@ -40,7 +43,6 @@ class AnimationWindows(QWidget):
     def mouseMoveEvent(self, QMouseEvent):
         if Qt.LeftButton and self.m_drag:
             self.move(QMouseEvent.globalPos() - self.m_DragPosition)
-
 
     def mouseReleaseEvent(self, QMouseEvent):
         self.m_drag = False

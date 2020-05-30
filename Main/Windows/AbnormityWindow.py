@@ -15,11 +15,12 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 
+
 class AbnormityWindow(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("异形窗口")
-        self.pix = QBitmap('./images/mask.png')
+        self.pix = QBitmap('/home/agou-ops/PycharmProjects/myPyQT5-StudyNote/Main/Windows/images/mask.png')
         self.resize(self.pix.size())
         self.setMask(self.pix)
 
@@ -42,13 +43,15 @@ class AbnormityWindow(QWidget):
             # 实时计算窗口左上角坐标
             self.move(QMouseEvent.globalPos() - self.m_DragPosition)
 
-
     def mouseReleaseEvent(self, QMouseEvent):
         self.m_drag = False
         self.setCursor(QCursor(Qt.ArrowCursor))
+
     def paintEvent(self, event):
         painter = QPainter(self)
-        painter.drawPixmap(0,0,self.pix.width(),self.pix.height(),QPixmap('./images/screen1.jpg'))
+        painter.drawPixmap(0, 0, self.pix.width(), self.pix.height(), QPixmap('/home/agou-ops/PycharmProjects/myPyQT5-StudyNote/Main/Windows/images/screen1.jpg'))
+
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     form = AbnormityWindow()

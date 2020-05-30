@@ -13,6 +13,8 @@ CSS
 
 from PyQt5.QtWidgets import *
 import sys
+
+
 class BasicQSS(QWidget):
     def __init__(self):
         super().__init__()
@@ -31,13 +33,16 @@ class BasicQSS(QWidget):
         vbox.addWidget(btn3)
 
         self.setLayout(vbox)
+
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     form = BasicQSS()
     # 选择器
     qssStyle = '''
         QPushButton {
-            background-color:red
+            background-color: red;
+            color: yellow
         }
     '''
     form.setStyleSheet(qssStyle)
