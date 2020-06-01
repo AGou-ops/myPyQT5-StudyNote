@@ -1,5 +1,5 @@
 QMainWindow{
-    border-image:url(./images/python.jpg);
+    border-image:url(/home/agou-ops/PycharmProjects/myPyQT5-StudyNote/Main/Windows/images/python.jpg);
 }
 
 QToolTip {

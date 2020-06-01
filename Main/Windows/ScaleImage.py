@@ -16,13 +16,13 @@ class ScaleImage(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("图片大小缩放例子")
-        filename = './images/Cloudy_72px.png'
+        filename = '/home/agou-ops/PycharmProjects/myPyQT5-StudyNote/Main/Windows/images/Cloudy_72px.png'
         img = QImage(filename)
         label1 = QLabel(self)
         label1.setFixedWidth(200)
         label1.setFixedHeight(200)
 
-        result = img.scaled(label1.width(),label1.height(),Qt.IgnoreAspectRatio,Qt.SmoothTransformation)
+        result = img.scaled(label1.width(), label1.height(), Qt.IgnoreAspectRatio, Qt.SmoothTransformation)
         label1.setPixmap(QPixmap.fromImage(result))
 
         vbox = QVBoxLayout()
@@ -30,9 +30,9 @@ class ScaleImage(QWidget):
 
         self.setLayout(vbox)
 
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     win = ScaleImage()
     win.show()
     sys.exit(app.exec_())
-

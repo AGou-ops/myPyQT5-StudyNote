@@ -12,10 +12,10 @@ if __name__ == "__main__":
     win = QMainWindow()
     win.setWindowTitle('窗口的透明度设置')
     # 0到1，1表示不透明，0表示完全透明
-    win.setWindowOpacity(0.6)
+    win.setWindowOpacity(0.8)
 
-    button = QPushButton('我的按钮',win)
+    button = QPushButton('我的按钮', win)
 
-    win.resize(400,200)
+    win.resize(400, 200)
     win.show()
     sys.exit(app.exec())

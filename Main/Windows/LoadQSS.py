@@ -8,6 +8,7 @@ import sys
 from PyQt5.QtWidgets import *
 from CommonHelper import CommonHelper
 
+
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
@@ -22,12 +23,12 @@ class MainWindow(QMainWindow):
         btn.clicked.connect(self.onClick)
         self.setLayout(vbox)
 
-        widget  = QWidget(self)
+        widget = QWidget(self)
         self.setCentralWidget(widget)
         widget.setLayout(vbox)
 
     def onClick(self):
-        styleFile = './style.qss'
+        styleFile = '/home/agou-ops/PycharmProjects/myPyQT5-StudyNote/Main/Windows/style.qss'
         qssStyle = CommonHelper.readQSS(styleFile)
         win.setStyleSheet(qssStyle)
 

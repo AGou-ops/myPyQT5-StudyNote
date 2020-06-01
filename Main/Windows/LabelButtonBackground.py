@@ -12,7 +12,7 @@ class LabelButtonBackground(QWidget):
         super().__init__()
         label1 = QLabel(self)
         label1.setToolTip('这是一个文本标签')
-        label1.setStyleSheet('QLabel{border-image:url(./images/python.jpg);}')
+        label1.setStyleSheet('QLabel{border-image:url(/home/agou-ops/PycharmProjects/myPyQT5-StudyNote/Main/Windows/images/python.jpg);}')
 
         label1.setFixedWidth(476)
         label1.setFixedHeight(259)
@@ -26,10 +26,10 @@ class LabelButtonBackground(QWidget):
         
             #btn1{
                 border-radius:4px;
-                background-image:url('./images/add.png');
+                background-image:url('/home/agou-ops/PycharmProjects/myPyQT5-StudyNote/Main/Windows/images/add.png');
             }
             #btn1:Pressed {
-                background-image:url('./images/addhover.png');
+                background-image:url('/home/agou-ops/PycharmProjects/myPyQT5-StudyNote/Main/Windows/images/addhover.png');
             }
         '''
         btn1.setStyleSheet(style)
