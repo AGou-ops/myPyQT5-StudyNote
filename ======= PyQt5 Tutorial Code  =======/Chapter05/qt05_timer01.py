@@ -15,7 +15,6 @@ class WinForm(QWidget):
 	def __init__(self,parent=None): 
 		super(WinForm,self).__init__(parent) 
 		self.setWindowTitle("QTimer demo")
-		self.listFile= QListWidget() 
 		self.label = QLabel('显示当前时间')
 		self.startBtn = QPushButton('开始') 
 		self.endBtn = QPushButton('结束') 

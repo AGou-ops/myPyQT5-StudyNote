@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>584</width>
+    <height>511</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>30</y>
+     <width>91</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Menu&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>110</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Appertizer</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="brisk">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>110</y>
+     <width>70</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>$12 brisk</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">appertizers</string>
+   </attribute>
+  </widget>
+  <widget class="QCheckBox" name="stoup">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>140</y>
+     <width>70</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>$10 stoup</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">appertizers</string>
+   </attribute>
+  </widget>
+  <widget class="QCheckBox" name="rochin">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>170</y>
+     <width>70</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>$11 rochin</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">appertizers</string>
+   </attribute>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>240</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Main Course</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>350</y>
+     <width>47</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dessert</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>450</y>
+     <width>47</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Bill: </string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="chicken">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>240</y>
+     <width>211</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>$32 Chicken soup with plantain freckles</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">main</string>
+   </attribute>
+  </widget>
+  <widget class="QCheckBox" name="rice">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>270</y>
+     <width>141</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>$26 Fried rice and Brisket</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">main</string>
+   </attribute>
+  </widget>
+  <widget class="QCheckBox" name="potato">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>300</y>
+     <width>161</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>$20 Potatoe soup and steak</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">main</string>
+   </attribute>
+  </widget>
+  <widget class="QCheckBox" name="cake">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>350</y>
+     <width>70</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>$5 Cake</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">Dessert</string>
+   </attribute>
+  </widget>
+  <widget class="QCheckBox" name="ice_cream">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>380</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>$6 Ice Cream</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">Dessert</string>
+   </attribute>
+  </widget>
+  <widget class="QCheckBox" name="pie">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>410</y>
+     <width>70</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>$5 Pie</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">Dessert</string>
+   </attribute>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="appertizers"/>
+  <buttongroup name="main"/>
+  <buttongroup name="Dessert"/>
+ </buttongroups>
+</ui>

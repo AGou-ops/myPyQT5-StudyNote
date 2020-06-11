@@ -20,7 +20,7 @@ class WinForm(QWidget):
 
         self.open_btn = QPushButton('获取时间')
         self.lineEdit_inner = QLineEdit(self)
-        self.lineEdit_emit = QLineEdit(self)
+        self.lineEdit_emit = QTextEdit(self)
         self.open_btn.clicked.connect(self.openDialog)
 
         self.lineEdit_inner.setText('接收子窗口内置信号的时间')
@@ -44,10 +44,8 @@ class WinForm(QWidget):
     def deal_inner_slot(self, date):
         self.lineEdit_inner.setText(date.toString())
 
-
-    def deal_emit_slot(self, dateStr):
-        self.lineEdit_emit.setText(dateStr)
-
+    def deal_emit_slot(self, dateStr, notice):
+        self.lineEdit_emit.setText(dateStr + "\n" + notice)
 
 
 if __name__ == "__main__":

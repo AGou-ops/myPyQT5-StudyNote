@@ -1,0 +1,268 @@
+{init}:
+
+- initialize a local git repo using the current working directory: 
+  (git init)
+
+
+{clone}:
+
+- copy a local/remote repo to a local directory (adds a new directory): 
+  (git clone <path/URL>)
+
+- copy a local/remote repo and rename it in one step: 
+  (git clone <path/URL> <directory-name>)
+
+
+{status}:
+
+- Check the status of a repo:
+  (git status)
+
+
+{log}:
+
+- display basic info (SHA, author, date, message) about all existing commits:
+  (git log)
+
+- display basic info plus statistics (files changed, no.of lines changed):
+  (git log --stat)
+
+- display basic info plus actual patches made (files changed, where are the changes, what are the changes):
+  (git log -p)
+
+- display basic info plus patch info with whitespace changes ignored:
+  (git log -p -w)
+
+- display basic info plus both statistics and patch info:
+  (git log -p --stat)
+
+- only display short commit SHA and commit message for each commit:
+  (git log --oneline)
+
+- display log with <flags> starting from a specific commit:
+  (git log <flags> <commit-SHA>)
+
+
+{show}:
+
+- display basic info plus patch info (by default) for last commit only:
+  (git show)
+
+- display basic info plus patch info (by default) for a specific commit only:
+  (git show <commit-SHA>)
+
+- display basic info plus patch info (by default) for a specific commit only with whitespace changes ignored:
+  (git show -w <commit-SHA>)
+
+- display basic info plus statistics info for a specific commit only (default -p will be disabled):
+  (git show --stat <commit-SHA>)
+
+- display basic info plus both statistics and patch info for a specific commit only:
+  (git show --stat -p <commit-SHA>)
+
+
+{add}:
+
+- add specific file(s) in working directory to the staging area for tracking (separate names by spaces):
+  (git add <file1-name> <file2-name> … <fileN-name>)
+
+- add all files in working directory to the staging area for tracking:
+  (git add .)
+
+- remove/unstage file(s) from staging area (separate names by spaces):
+  (git rm --cached <file1-name> <file2-name> …<fileN-name>)
+
+
+{commit}:
+
+- save files in the staging area as a commit (opens text editor to provide a commit message):
+  (git commit)
+
+- save files in the staging area and provide a commit message in one step:
+  (git commit -m "<message>")
+
+- add changes in tracked files to the staging area, save them as a commit, and provide a commit message in one step (new untracked files will not be included):
+  (git commit -am "<message>")
+
+- Modify last commit message (changes commit SHA):
+  (git commit --amend)
+
+- Modify last commit body (add changes to staging area then..):
+  (git commit --amend)
+
+
+{diff}:
+
+- display uncommited changes:
+  (git diff)
+
+- display uncommited changes with whitespace changes ignored:
+  (git diff -w)
+
+- discard uncommited changes and restore <file-name> to last commit state:
+  (git checkout -- <file-name>)
+
+- display difference between any two commits (changes made to transform commit1 to commit2):
+  (git diff <commit1-reference> <commit2-reference>)
+
+
+{tag}:
+
+- list all tags in a repo:
+  (git tag)
+
+- add a tag to the last commit:
+  (git tag <tag>)
+
+- add an annotated tag to the last commit (opens text editor to provide a tag message):
+  (git tag -a <tag>)
+
+- add a tag to a specific commit:
+  (git tag <tag> <commit-SHA>)
+
+- add an annotated tag to a specific commit (opens text editor to provide a tag message):
+  (git tag -a <tag> <commit-SHA>)
+
+- delete a tag:
+  (git tag -d <tag>)
+
+
+{branch}:
+
+- list all branches in a repo and highlight active one (with an asterisk):
+  (git branch)
+
+- add a branch starting from last commit in the active branch:
+  (git branch <branch-name>)
+
+- add a branch starting from a specific commit in the active branch:
+  (git branch <branch-name> <commit-SHA>)
+
+- switch to a branch:
+  (git checkout <branch-name>)
+
+- add a branch and switch to it in one step:
+  (git checkout -b <branch-name>)
+
+- add a branch to an existing branch while being on a third branch and switch to it:
+  (git checkout -b <new-branch-name> <existing_branch_name>)
+
+- graph all existing commits through lines that indicate each branch:
+  (git log --oneline --graph --all)
+
+- delete a branch
+  (git branch -d <branch-name>)
+
+- force deletion of a branch with unique commits:
+  (git branch -D <branch-name>)
+
+
+{merge}:
+
+- merge a branch into the current active branch (produces a new commit if a divergent merge):
+  (git merge <branch-name>)
+
+- undo a merge if made on the wrong branch:
+  (git reset --hard HEAD^)
+
+- cancel a merge in case of a conflict:
+  (git merge --abort)
+
+
+{revert}:
+
+- undo changes made in a specific commit from last commit (produces a new commit):
+  (git revert <commit-SHA>)
+
+
+{reset}:
+
+- remove last (no. of carets) commit(s) from active branch and send its changes to the working directory:
+  (git reset HEAD^)
+
+- OR.. remove last (no. next to telda) commit(s) from active branch and send its changes to the working:
+  (git reset HEAD~1)
+
+- remove last commit from active branch and send its changes to the staging area (relative referencing above applies):
+  (git reset --soft HEAD^)
+
+- remove last commit from active branch (relative referencing above applies):
+  (git reset --hard HEAD^)
+
+- access removed commits:
+  (git reflog .. research it)
+
+
+{remote}:
+
+- list names of all remotes connected to a repo:
+  (git remote)
+
+- list names of all remotes and URL of each:
+  (git remote -v)
+
+- connect a local repo to a remote:
+  (git remote add <remote-name> <remote-URL>)
+
+- rename a remote:
+  (git remote rename <old-name> <new-name>)
+
+
+{push}:
+
+- copy commits of a local branch to a remote branch (a local tracking branch will be created):
+  (git push <remote-name> <branch-name>)
+
+
+{pull}:
+
+- copy commits of a remote branch to local branch:
+  (git pull <remote-name> <branch-name>)
+
+
+{fetch}:
+
+- copy commits of a remote branch to local "tracking" branch:
+  (git fetch <remote-name> <branch-name>)
+
+
+{shortlog}:
+
+- group commits by author, sorted alphabetically by author name (commits messages are displayed):
+  (git shortlog)
+
+- group commits by author, sorted numerically by no. of commits (commits messages are displayed):
+  (git shortlog -n)
+
+- group commits by author, sorted alphabetically by author name (shorter with no commits messages):
+  (git shortlog -s)
+
+- group commits by author, sorted numerically by no. of commits (shorter with no commits messages):
+  (git shortlog -s -n)
+
+- filter commits by a specific author, display (all basic info):
+  (git log --author=<author-name>)
+
+- filter commits by a specific author, display (no. of commits, commits messages):
+  (git shortlog --author=<author-name>)
+
+- filter commits by a specific author, display (no. of commits):
+  (git shortlog -s --author=<author-name>)
+
+- filter commits by a specific author, display and sort by (no. of commits) if more than one author yielded:
+  (git shortlog -s -n --author=<author-name>)
+
+- filter commits by exactly one author, display (all basic info):
+  (git log --author="<author-full-name>")
+
+- filter commits containing a word in commit message or description area, display (all basic info):
+  (git log --grep=<word>)
+
+- filter commits containing a sentence in commit message or description area, display (all basic info):
+  (git log --grep="<sentence>")
+
+
+{rebase}:
+
+- modify a past n commit(s) (opens text editor to provide modifying command(s)):
+  (git rebase -i HEAD~n)

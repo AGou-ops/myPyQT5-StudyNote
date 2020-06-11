@@ -21,9 +21,9 @@ class ListViewDemo(QWidget):
 		slm = QStringListModel();
 		self.qList = ['Item 1','Item 2','Item 3','Item 4' ]	
 		slm.setStringList(self.qList)
-		listView.setModel(slm )
+		listView.setModel(slm)
 		listView.clicked.connect(self.clicked)		
-		layout.addWidget( listView )
+		layout.addWidget(listView )
 		self.setLayout(layout) 		 
 
 	def clicked(self, qModelIndex):

@@ -6,7 +6,7 @@
   
   
 '''
-from __future__ import division
+# from __future__ import division
 
 import sys
 from PyQt5.QtWidgets import (QApplication, QComboBox, QDialog,

@@ -35,6 +35,7 @@ class WinForm(QWidget):
 
     def onButton1Click(self):
         dialog = DateDialog(self)
+        # 执行成功或者失败
         result = dialog.exec_()
         date = dialog.dateTime()
         self.lineEdit.setText(date.date().toString())

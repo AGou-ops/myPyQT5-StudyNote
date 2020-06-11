@@ -18,7 +18,6 @@ class MainWindow(QMainWindow):
 		super(QMainWindow, self).__init__()
 		self.setWindowTitle('QWebView打开网页例子')
 		self.setGeometry(5, 30, 1355, 730)
-		self.browser = QWebEngineView()
         #1 加载html代码
 		self.browser = QWebEngineView()
 		self.browser.setHtml('''

@@ -30,7 +30,8 @@ class Table(QWidget):
         newItem.setTextAlignment( Qt.AlignRight| Qt.AlignBottom )      
         tableWidget.setItem(0, 0, newItem)  
                           
-        newItem = QTableWidgetItem("男")  
+        newItem = QTableWidgetItem("男")
+        newItem.setTextAlignment(Qt.AlignHCenter)
         tableWidget.setItem(0, 1, newItem)  
           
         newItem = QTableWidgetItem("160")  

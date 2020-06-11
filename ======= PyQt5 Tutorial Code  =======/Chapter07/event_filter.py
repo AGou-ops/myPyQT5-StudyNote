@@ -36,8 +36,8 @@ class EventFilter(QDialog):
         self.setLayout(mainLayout)
 
     def eventFilter(self, watched, event):
-        if watched == self.label1: # 只对label1的点击事件进行过滤，重写其行为，其他的事件会被忽略
-            if event.type() == QEvent.MouseButtonPress: # 这里对鼠标按下事件进行过滤，重写其行为
+        if watched == self.label3:  # 只对label3的点击事件进行过滤，重写其行为，其他的事件会被忽略
+            if event.type() == QEvent.MouseButtonPress:  # 这里对鼠标按下事件进行过滤，重写其行为
                 mouseEvent = QMouseEvent(event)
                 if mouseEvent.buttons() == Qt.LeftButton:
                     self.LabelState.setText("按下鼠标左键")
@@ -50,11 +50,11 @@ class EventFilter(QDialog):
                 transform = QTransform()
                 transform.scale(0.5, 0.5)
                 tmp = self.image1.transformed(transform)
-                self.label1.setPixmap(QPixmap.fromImage(tmp))
-            if event.type() == QEvent.MouseButtonRelease: # 这里对鼠标释放事件进行过滤，重写其行为
+                self.label3.setPixmap(QPixmap.fromImage(tmp))
+            if event.type() == QEvent.MouseButtonRelease:  # 这里对鼠标释放事件进行过滤，重写其行为
                 self.LabelState.setText("释放鼠标按钮")
-                self.label1.setPixmap(QPixmap.fromImage(self.image1))
-        return QDialog.eventFilter(self, watched, event) # 其他情况会返回系统默认的事件处理方法。
+                self.label3.setPixmap(QPixmap.fromImage(self.image1))
+        return QDialog.eventFilter(self, watched, event)  # 其他情况会返回系统默认的事件处理方法。
 
 
 if __name__ == '__main__':

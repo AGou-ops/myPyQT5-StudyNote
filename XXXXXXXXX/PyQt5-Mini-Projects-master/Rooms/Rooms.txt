@@ -1,0 +1,24 @@
+login/register 
+
+owner{
+add/create room
+check available room
+set room price
+add room features
+receive payment
+}
+
+guest{
+book room
+check room features
+check room price
+payment
+make reservation
+}
+
+room{
+no of rooms
+available rooms
+room features/details
+room price
+}

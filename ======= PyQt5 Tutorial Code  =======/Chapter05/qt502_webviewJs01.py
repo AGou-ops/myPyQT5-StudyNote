@@ -6,14 +6,12 @@
   
 '''
 
-
-from PyQt5.QtWidgets  import QApplication , QWidget , QVBoxLayout , QPushButton
+from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 import sys
 
-
 # 创建一个 application实例
-app = QApplication(sys.argv)  
+app = QApplication(sys.argv)
 win = QWidget()
 win.setWindowTitle('Web页面中的JavaScript与 QWebEngineView交互例子')
 
@@ -64,11 +62,14 @@ view.setHtml('''
 # 创建一个按钮去调用 JavaScript代码
 button = QPushButton('设置全名')
 
+
 def js_callback(result):
     print(result)
-    
+
+
 def complete_name():
-   view.page().runJavaScript('completeAndReturnName();', js_callback)
+    view.page().runJavaScript('completeAndReturnName();', js_callback)
+
 
 # 按钮连接 'complete_name'槽，当点击按钮是会触发信号
 button.clicked.connect(complete_name)

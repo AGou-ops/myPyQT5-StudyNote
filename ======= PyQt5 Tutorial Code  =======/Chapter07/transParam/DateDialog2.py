@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import *
 
 
 class DateDialog(QDialog):
-    Signal_OneParameter = pyqtSignal(str)
+    Signal_OneParameter = pyqtSignal(str, str)
 
     def __init__(self, parent=None):
         super(DateDialog, self).__init__(parent)
@@ -42,4 +42,4 @@ class DateDialog(QDialog):
 
     def emit_signal(self):
         date_str = self.datetime_emit.dateTime().toString()
-        self.Signal_OneParameter.emit(date_str)
+        self.Signal_OneParameter.emit(date_str, 'diy')
