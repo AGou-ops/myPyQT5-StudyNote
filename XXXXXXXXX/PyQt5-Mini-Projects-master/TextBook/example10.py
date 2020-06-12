@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QDialog, QApplication
-from TextBook.exam10 import *
+from exam10 import *
 
 
 class Sname:

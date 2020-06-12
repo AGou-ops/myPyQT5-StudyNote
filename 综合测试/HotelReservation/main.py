@@ -4,6 +4,9 @@ from PyQt5.QtWidgets import QDialog, QApplication
 from mainUi import *
 import datetime
 
+"""
+实时检测控件变化
+"""
 
 class Hotel(QDialog):
     def __init__(self):

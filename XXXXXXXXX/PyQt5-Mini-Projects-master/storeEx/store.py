@@ -2,7 +2,7 @@ import sys
 
 from PyQt5.QtWidgets import QMainWindow, QApplication
 from PyQt5.QtWidgets import QMessageBox
-from storeEx.main import *
+from main import *
 
 
 class Store(QMainWindow):

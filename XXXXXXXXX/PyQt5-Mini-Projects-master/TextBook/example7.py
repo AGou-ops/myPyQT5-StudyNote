@@ -1,6 +1,8 @@
 import sys
+
+from PyQt5 import QtGui
 from PyQt5.QtWidgets import QDialog,QApplication
-from TextBook.exam7 import *
+from exam7 import *
 
 class Fonts(QDialog):
     def __init__(self):

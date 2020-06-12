@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QDialog, QApplication
-from TextBook.CopyPaste.mainUi import *
+from mainUi import *
 
 
 class Copy(QDialog):

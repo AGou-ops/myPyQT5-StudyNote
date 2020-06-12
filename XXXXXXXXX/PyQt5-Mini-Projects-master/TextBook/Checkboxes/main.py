@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QDialog, QApplication
-from TextBook.Checkboxes.mainUi import *
+from mainUi import *
 
 
 class Menu(QDialog):

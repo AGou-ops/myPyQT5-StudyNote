@@ -4,7 +4,7 @@ from PyQt5.QtCore import QUrl
 from PyQt5.QtWidgets import QDialog, QApplication
 #from PyQt5.QtWebEngineWidgets import QWebEngineView
 
-from TextBook.exam11 import *
+from exam11 import *
 
 
 class Browser(QDialog):

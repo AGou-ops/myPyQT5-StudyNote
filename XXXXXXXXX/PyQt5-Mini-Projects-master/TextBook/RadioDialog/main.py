@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QDialog, QApplication
-from TextBook.RadioDialog.mainUi import *
+from mainUi import *
 
 
 class Shopper(QDialog):
@@ -18,19 +18,17 @@ class Shopper(QDialog):
         self.show()
 
     def selOption(self):
-        select = "";
+        select = ""
         select2 = ""
 
         if self.ui.radioButton.isChecked():
-            select = 'S'
+            select = self.ui.radioButton.text()
         if self.ui.radioButton_2.isChecked():
-            select = 'M'
-        if self.ui.radioButton.isChecked():
-            select = 'XL'
+            select = self.ui.radioButton_2.text()
         if self.ui.radioButton_3.isChecked():
-            select = 'X'
+            select = self.ui.radioButton_3.text()
         if self.ui.radioButton_4.isChecked():
-            select = 'S'
+            select = self.ui.radioButton_4.text()
 
         if self.ui.radioButton_5.isChecked():
             select2 = 'MasterCard'

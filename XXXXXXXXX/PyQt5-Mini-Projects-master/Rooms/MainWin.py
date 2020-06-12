@@ -4,9 +4,9 @@ import datetime
 from pymongo import MongoClient
 
 from PyQt5.QtWidgets import QDialog, QApplication, QMainWindow
-from Rooms.main import Ui_MainWindow
-from Rooms.register import Ui_Dialog
-from Rooms.login import Ui_Dialog
+from main import Ui_MainWindow
+from register import Ui_Dialog
+from login import Ui_Dialog
 
 port = 27017
 

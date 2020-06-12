@@ -1,7 +1,7 @@
 import sqlite3,sys
 
 from PyQt5.QtWidgets import QDialog,QApplication,QInputDialog, QTableWidgetItem
-from TextBook.ContactBook.mainUi import *
+from mainUi import *
 
 class Contacts(QDialog):
     def __init__(self):

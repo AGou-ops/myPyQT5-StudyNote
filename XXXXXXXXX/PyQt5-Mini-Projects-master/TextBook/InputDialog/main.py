@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QDialog, QApplication
-from TextBook.InputDialog.mainUi import *
+from mainUi import *
 
 
 class MyForm(QDialog):
