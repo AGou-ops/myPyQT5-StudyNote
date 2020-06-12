@@ -49,7 +49,7 @@ class InsertDialog(QDialog):
 
         self.mobileinput = QLineEdit()
         self.mobileinput.setPlaceholderText("Mobile")
-        self.mobileinput.setInputMask('99999 99999')
+        self.mobileinput.setInputMask('99999 99999;_')
         layout.addWidget(self.mobileinput)
 
         self.addressinput = QLineEdit()
@@ -87,8 +87,8 @@ class InsertDialog(QDialog):
 
 
 class SearchDialog(QDialog):
-    def __init__(self, *args, **kwargs):
-        super(SearchDialog, self).__init__(*args, **kwargs)
+    def __init__(self):
+        super().__init__()
 
         self.QBtn = QPushButton()
         self.QBtn.setText("Search")
@@ -198,11 +198,13 @@ class LoginDialog(QDialog):
             QMessageBox.warning(self, 'Error', 'Wrong Password')
 
 
-class AboutDialog(QDialog):
+class AboutDialog(QMessageBox):
     def __init__(self, *args, **kwargs):
         super(AboutDialog, self).__init__(*args, **kwargs)
+        self.aboutQt(self, "About Qt")
+        self.show()
 
-        self.setFixedWidth(300)
+"""        self.setFixedWidth(300)
         self.setFixedHeight(250)
 
         QBtn = QDialogButtonBox.Ok  # No cancel
@@ -231,7 +233,7 @@ class AboutDialog(QDialog):
 
         layout.addWidget(self.buttonBox)
 
-        self.setLayout(layout)
+        self.setLayout(layout)"""
 
 
 class MainWindow(QMainWindow):
@@ -303,7 +305,7 @@ class MainWindow(QMainWindow):
         deluser_action.triggered.connect(self.delete)
         file_menu.addAction(deluser_action)
 
-        about_action = QAction(QIcon("icon/info.png"), "Developer", self)
+        about_action = QAction(QIcon("icon/info.png"), "About QT", self)
         about_action.triggered.connect(self.about)
         help_menu.addAction(about_action)
 
@@ -344,7 +346,7 @@ class MainWindow(QMainWindow):
 
     def about(self):
         dlg = AboutDialog()
-        dlg.exec_()
+        # dlg.exec_()
 
 
 app = QApplication(sys.argv)
