@@ -8,10 +8,19 @@ jobs:
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v1
-      - name: 'Mirror to gitee'
-        uses: pixta-dev/repository-mirroring-action@v1
-        with:
-          target_repo_url:
-            git@gitee.com:agou-ops/myPyQT5-StudyNote.git
-          ssh_private_key:
-            ${{ secrets.GITEE_KEY }}
+      - name: Mirror the Github organization repos to Gitee.
+      uses: Yikun/hub-mirror-action@master
+      with:
+        src: github/AGou-ops
+        dst: gitee/agou-ops
+        dst_key: ${{ secrets.GITEE_KEY }}
+        dst_token: ${{ secrets.GITEE_TOKEN }}
+        account_type: org
+
+#      - name: 'Mirror to gitee'
+#        uses: pixta-dev/repository-mirroring-action@v1
+#        with:
+#          target_repo_url:
+#            git@gitee.com:agou-ops/myPyQT5-StudyNote.git
+#          ssh_private_key:
+#            ${{ secrets.GITEE_KEY }}
