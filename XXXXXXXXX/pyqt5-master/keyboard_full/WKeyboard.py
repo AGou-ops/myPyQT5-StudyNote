@@ -13,7 +13,7 @@ from PyQt5.QtWidgets import QTextEdit
 from PyQt5.QtWidgets import QVBoxLayout
 from PyQt5.QtWidgets import QWidget
 
-from keyboard_full.KeyboardKey import KeyboardKey
+from KeyboardKey import KeyboardKey
 
 
 class MainWindow(QWidget):

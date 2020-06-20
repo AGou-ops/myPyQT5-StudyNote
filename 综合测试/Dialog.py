@@ -36,7 +36,7 @@ class MessageBoxDlg(QDialog):
         criticalButton.clicked.connect(self.slotCritical)
         aboutButton.clicked.connect(self.slotAbout)
         aboutqtButton.clicked.connect(self.slotAboutQt)
-        customButton.clicked.connect(self.slotAbout)
+        customButton.clicked.connect(self.slotCustom)
 
     def slotQuestion(self):
         button = QMessageBox.question(self, "Question",

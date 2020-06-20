@@ -44,9 +44,9 @@ class MainWindow(QMainWindow):
         self.wid.close()
         self.wid.hide()
         del self.wid
-        self.wid = Dialog()
-        self.wid.setStyleSheet("background-color: red;")
-        self.layout.addWidget(self.wid)
+        # self.wid = Dialog()
+        # self.wid.setStyleSheet("background-color: red;")
+        # self.layout.addWidget(self.wid)
 
 
 if __name__ == "__main__":
